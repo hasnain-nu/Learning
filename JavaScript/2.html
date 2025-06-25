@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>java</title>
+<body>
+    <h1>javascript variables:</h1>
+    <p id="hey"></p>
+            <script>
+        let person = "Hassan";
+    document.getElementById("hey").innerHTML = person;
+            </script>
+    <p2 id="demo"> </p2>
+          <script>
+        let x=3+4+5+6;
+     document.getElementById("demo").innerHTML = x;
+         </script>
+    <p3 id="demo2"> </p3>
+          <script>
+        let y= "hasnain"+"  "+"ali";
+            document.getElementById("demo2").innerHTML = y;
+            </script>
+
+<p4 id="demo3"></p4>
+<script>
+var z = 5;
+
+{
+    var z=20;
+
+}
+// we can also access the variable z outside the block
+document.getElementById("demo3").innerHTML = z; 
+</script>
+<h1>javascript const </h1>
+
+<p>using const array does not make the elements unchangeable</p>
+<p id="demo4"></p>
+<script>
+    const cars = ["BMW", "Volvo", "Mini"];
+    cars[0]='ford';
+    cars.push('suzuki');
+document.getElementById("demo4").innerHTML = cars;
+// we can change the elements of const array but we can add but we cannot reassign the array 
+const car ={type:"Fiat", model:"500", color:"white"};
+car.type = "BMW"; // we can change the type of car by creatin its object
+car.model = "X5"; // we can change the model of car 
+document.getElementById("demo4").innerHTML += "<br>" + car.type + " " + car.model + " " + car.color;
+// same goes here we can change the properties of const object but we cannot reassign the object 
+</script>
+</body>
+
+
+</html>

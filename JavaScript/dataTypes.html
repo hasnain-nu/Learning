@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>  
+<head>
+    <title>Data Types in JavaScript</title> 
+</head>
+<body>
+    
+    <p>too many large numbers can be written as in exponent like : </p>
+<p1 id="demo"></p2>
+    <script> 
+    //too large numbers can be written as in exponent like 
+    let number = 124e5;
+    document.getElementById("demo").innerHTML = number;    
+    </script>
+    <p>too many big numbers can be written using the BigInt data type </p1>
+        <p id="BigInt"></p>
+        <script>
+            // too many big numbers can be written using the BigInt data type 
+            let bignumber=BigInt("23232432534545446456654345");
+            document.getElementById("BigInt").innerHTML = bignumber;
+        </script>
+    <p>boolean data type in javascript:</p>
+    <p id="boolean"></p>
+    <script>
+        //boolean data type in javascript
+        let number1 = 10;
+        let number2 = 20;   
+       // let isEqual = number1 == number2; // false
+        //document.getElementById("boolean").innerHTML = "Is number1 equal to number2? " + isEqual;
+        document.getElementById("boolean").innerHTML = "Is number1 equal to number2? " + (number1 ==number2);
+        </script>
+        <p>Array DataType in javaScript</p>
+        <p id="array"></p>
+        <script>
+            //Array DataType in javaScript
+            let fruits = ["Apple", "Banana", "Cherry"];
+            fruits.push('mango');
+            fruits[0]='orange';
+            document.getElementById("array").innerHTML = "Fruits:<br>" +fruits;
+            </script>
+            <p>Object data type :</p>
+            <p id="object"></p>
+            <script>
+                //Object data type
+                let person = {
+                    firstName: "hasnain",
+                    lastName: "abbas",
+                    age: 30,
+                    eyeColor : "blue"
+
+                };
+                
+                document.getElementById("object").innerHTML =  person.firstName + " " + person.lastName + ", is " + person.age +" years old and has " + person.eyeColor + " eyes.";
+                </script>
+                <p>The TypeOf operator in javaScript:</p>
+                <p id="typeof"></p>
+                <script>
+                    //The TypeOf operator in javaScript
+                    let numm = 5;
+                    let numm2 = "Hello";
+                    let numm3 = true;
+                    let arr = [1, 2, 3];
+                    let obj = {name: "John", age: 30};
+                    let car;
+                    document.getElementById("typeof").innerHTML = "the type of x is " + typeof numm + "<br>" +
+                    "the type of second one is " + typeof numm2 + "<br>"+ "the type of third one is "+ typeof numm3 + "<br>" +
+                    "the type of arr is " + typeof arr + "<br>" + "the type of obj is "+ typeof obj + "<br>" +"the type of car is " + typeof car;  
+                    
+                </script>
+<script>
+    //when we add a number too a string js will teat the numner as string and concatenate it
+let x= 6+' hasnain';
+document.write("<br>" +x);
+let y= 6+5+'hasnain khan';
+document.write("<br>" + y);
+//the below example and above are two different
+//the below example will add the numbers first and then concatenate the string
+// and in the above example it will concatenate the string first and then add the numbers
+let z= 'hasnain '+4 +5;
+document.write("<br>" + z);
+let a = 4;
+let b= 4.00;
+let c=4.5;
+document.write("<br>" + a + "<br>" + b + "<br>" + c);
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>

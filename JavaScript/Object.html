@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Example</title>
+</head>
+<body>
+    <h1>variables in javascript</h1>
+    <h2>objecet</h1>
+        <p id="obj"></p>
+        <script>
+            let person = "hasnain";
+            let age = 20;
+            
+            document.getElementById("obj").innerHTML = "my name is " + person + " and my age is "+ age + ".";
+
+        </script>
+        <h2>object literal</h2>
+        <p id="obj1"></p>
+
+        <script>
+            let person1 = {
+                name: "hasnain",
+                age: 20,
+                city:"gilgit",
+            };
+            document.getElementById("obj1").innerHTML = "my name is " + person1.name + " and i am "+ person1.age + " years old. I live in " + person1.city + ".";
+        // these are two different way to define an object literals:
+        </script>
+         <p id="obj2"></p>
+        <script>
+            let person2 ={};
+            //we can add later,  like in this way we can add properties to our object.
+            person2.name = "abbas";
+            person2.age = 30;
+            person2.city = "karachi";
+            document.getElementById("obj2").innerHTML = "my name is " + person2.name + " and i am "+ person2.age + " years old. I live in " + person2.city + ".";
+</script>
+            <h2>Object using new keyword</h2>
+            <p id="obj3"></p>
+            <script>
+                // object using new keyword
+                const person3= new Object();
+                person3.name = "ali";
+                person3.age = 25;
+                person3.city = "lahore";    
+                document.getElementById("obj3").innerHTML = "my name is " + person3.name + " and i am "+ person3.age + " years old. I live in " + person3.city + ".";
+            </script>
+            <h2>Object method </h2>
+            <p id="obj4"></p>
+            <script> 
+            // this is an example of object method    
+                const person4 = {
+                    name: "sara",
+                    age: 22,
+                    city: "islamabad",
+                    fullName: function(){
+                  return this.name + " is " + this.age + " years old and lives in " + this.city;
+
+                    }
+            } ;
+                document.getElementById("obj4").innerHTML = person4.fullName();
+                </script>
+                <p id="obj5"></p>
+                <script>
+                    const person5= {
+                        name:"ahmed ",
+                        age: 29
+                    }
+                    // this is but going to make a copy of our object but now x is our object.
+                   const x= person5;
+                   x.age= 30;
+                   document.getElementById("obj5").innerHTML = "my age is " + x.age;
+                   </script>
+                   <h2>Deleting properties from an object</h2>
+                     <p id="obj6"></p>
+                     <script>
+                          const person6= {
+                            name : "zainab",
+                            age: 23,
+                            nationality: "pakistani"
+                          };
+                          delete person6.nationality;
+                          document.getElementById("obj6").innerHTML = "name is " + person6.name + " and age is " + person6.age + " i am  from "+person6.nationality;
+
+</script>
+<h2 >Nested Objects </h2>
+<p id="obj7"></p>
+<script>
+    // nested objects are objects inside an object 
+    const person7={
+       name: "fatima",
+       age : 33,
+       myCars: {
+
+        car1:"bmw",
+        car2:"audi"
+       }
+
+    }
+    document.getElementById("obj7").innerHTML = "my name is " + person7.name+ "  and am "+ person7.age + " years old. I have two cars " +person7.myCars.car1+" and "+ person7.myCars.car2;
+    </script>
+    <!--object method -->
+    <h2>Object Method</h2>
+    <p id="obj8"></p>
+    <script>
+        const person8={
+            name: " sadia",
+            age : 23,
+            data : function(){
+                return "my name is " + this.name +" i am "+ this.age+ " years old.";
+
+            }
+
+        }
+        document.getElementById("obj8").innerHTML= person8.data();
+        </script>
+        <p id="obj9"></p>
+        <script>
+            // in above example i had make a method insdide an object and in this example i am making a method ouside an object:
+            person9 ={
+                name: "hussin",
+                age :23
+            };
+            person9.nam = function(){
+                return "my name is "+ this.name + " and i am " + this.age + " years old.";
+            };
+            document.getElementById("obj9").innerHTML = person9.nam();
+          </script>
+</body>
+</html>

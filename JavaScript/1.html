@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>My First Web Page</h1>
+<p>My First Paragraph</p>
+
+<p id="hasnain"></p>
+
+<script>
+document.getElementById("hasnain").innerHTML = "<h2>Hello World</h2>";
+</script>
+<!-- we have to use innerHTML to change the content of the paragraph element with html tags but when we dont want
+to change just use innertext which will not change whatever written inside the paragraph element leave it plain -->
+<Script>
+    document.getElementById("hasnain").innerText = "This is a paragraph from the first web page using inner text";
+</Script>
+<!--we can also use document.write its more convinent for texting purpose and it will erase all the previous html data
+when its been used after html file is load -->
+   <button type="button" onclick="document.write(1+1)">click it</button>
+<script>
+    <!-- this will show an alert message to user a pop up message -->
+    window.alert("this is an alert box");
+    console.log("this is a console log message");
+</script> 
+<h2>this is window print method </h2>
+<p>click the button to print the page the current page </p>
+<button type="button" onclick="window.print()">Print this page</button>
+<P></P>
+</body>
+</html>

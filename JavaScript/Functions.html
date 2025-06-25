@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions In java script </title>
+    <h2>function examples in java script :</h2>
+</head>
+<body>
+<p id="fun"></p>
+
+    <script>
+        // simple function example
+        // this function takes two parameters and returns their sum
+function myfunction(a , b){
+    return a +b;           
+                            }   
+document.getElementById("fun").innerHTML = myfunction(5, 10);
+    </script>
+    <p id="fun1"></p>
+    <script>
+        // function with parameters and displaying result in HTML
+        // this function takes two parameters and displays their multiplication in the HTML element with id "fun1"
+        // and in this function we are using button to evoke the function 
+function myfunction1(a, b) {
+    document.getElementById("fun1").innerHTML = "The multiplication of  " + a + " and " + b + " is: " + (a * b);
+}
+</script>
+<button type="button" onclick="myfunction1(2, 4)">Click me</button>
+<p id="fun2"></p>
+</script>
+<p id="fun3"></p>
+<script>
+    // same as above but over here am storing the result in a variabel and then am displaying it .
+let text = "the tempreture is " + function2(40)+" degree celcius";
+document.getElementById("fun3").innerHTML = text;
+function function2(temp) {
+    return (5/9)*(temp-32);
+}
+</script>
+
+<p id="fun4"></p>
+<p id="fun5"></p>
+<script>
+    // local variable example 
+    //this example demonstrates the scope of a variable defined inside a function
+    let text1 = "the type of car name is " + typeof carName  + "  outside of the function";
+    document.getElementById("fun4").innerHTML = text1;
+    function functionCar() {
+        let carName = "toyota";
+        let text1="inside function the type of car name is " + typeof carName;
+        document.getElementById("fun5").innerHTML = text1;
+    }
+functionCar();
+</script>
+</body>
+</html>
